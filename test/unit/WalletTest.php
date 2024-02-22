@@ -4,8 +4,8 @@ namespace Test\Unit;
 
 use Test\TestCase;
 use BitWasp\Bitcoin\Mnemonic\Bip39\Wordlist\EnglishWordList;
-use Web3p\EthereumWallet\Wallet;
-use Web3p\EthereumWallet\Wordlist\BIP39ChineseTraditionalWordList;
+use Bogdra\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wordlist\BIP39ChineseTraditionalWordList;
 
 class WalletTest extends TestCase
 {

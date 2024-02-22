@@ -1,14 +1,14 @@
 # ethereum-wallet
-[![PHP](https://github.com/web3p/ethereum-wallet/actions/workflows/php.yml/badge.svg)](https://github.com/web3p/ethereum-wallet/actions/workflows/php.yml)
-[![codecov](https://codecov.io/gh/web3p/ethereum-wallet/branch/master/graph/badge.svg)](https://codecov.io/gh/web3p/ethereum-wallet)
-[![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/web3p/ethereum-wallet/blob/master/LICENSE)
+[![PHP](https://github.com/bogdra/ethereum-wallet/actions/workflows/php.yml/badge.svg)](https://github.com/bogdra/ethereum-wallet/actions/workflows/php.yml)
+[![codecov](https://codecov.io/gh/bogdra/ethereum-wallet/branch/master/graph/badge.svg)](https://codecov.io/gh/bogdra/ethereum-wallet)
+[![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/bogdra/ethereum-wallet/blob/master/LICENSE)
 
 Ethereum wallet.
 
 # Install
 
 ```
-composer require web3p/ethereum-wallet
+composer require bogdra/ethereum-wallet
 ```
 
 # Usage
@@ -16,7 +16,7 @@ composer require web3p/ethereum-wallet
 Generate a new wallet:
 
 ```php
-use Web3p\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wallet;
 
 $wallet = new Wallet();
 $mnemonicLength = 15;
@@ -31,7 +31,7 @@ $wallet->generate($mnemonicLength);
 Recover wallet from mnemonic:
 
 ```php
-use Web3p\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wallet;
 
 $wallet = new Wallet();
 $mnemonic = '..........';
@@ -45,7 +45,7 @@ $wallet->fromMnemonic($mnemonic);
 
 # API
 
-### Web3p\EthereumWallet\Wallet
+### Bogdra\EthereumWallet\Wallet
 
 #### setWordlist
 
@@ -58,8 +58,8 @@ wordList - \BitWasp\Bitcoin\Mnemonic\WordList
 ###### Example
 
 ```php
-use Web3p\EthereumWallet\Wallet;
-use Web3p\EthereumWallet\Wordlist\BIP39ChineseTraditionalWordList;
+use Bogdra\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wordlist\BIP39ChineseTraditionalWordList;
 
 $wallet = new Wallet();
 $zh_TW_wordlist = new BIP39ChineseTraditionalWordList;
@@ -79,7 +79,7 @@ mnemonicLength - integer.
 * Generate a new wallet with 12 mnemonic.
 
 ```php
-use Web3p\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wallet;
 
 $wallet = new Wallet();
 $wallet->generate(12);
@@ -98,7 +98,7 @@ mnemonic - string.
 * Recover from a wallet.
 
 ```php
-use Web3p\EthereumWallet\Wallet;
+use Bogdra\EthereumWallet\Wallet;
 
 $wallet = new Wallet();
 $mnemonic = '..........';

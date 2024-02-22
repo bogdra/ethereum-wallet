@@ -2,14 +2,9 @@
 
 /**
  * This file is part of ethereum-wallet package.
- * 
- * (c) Kuan-Cheng,Lai <alk03073135@gmail.com>
- * 
- * @author Peter Lai <alk03073135@gmail.com>
  * @license MIT
  */
-
-namespace Web3p\EthereumWallet;
+namespace Bogdra\EthereumWallet;
 
 use BitWasp\Bitcoin\Mnemonic\MnemonicFactory;
 use BitWasp\Bitcoin\Mnemonic\Bip39\Bip39SeedGenerator;
@@ -20,66 +15,22 @@ use BitWasp\Bitcoin\Key\Factory\HierarchicalKeyFactory;
 use Web3p\EthereumUtil\Util;
 use InvalidArgumentException;
 
-/**
- * TODO: export/import version 1, 2, 3 of wallet
- */
 class Wallet
 {
-    /**
-     * wordlist
-     * 
-     * @var \BitWasp\Bitcoin\Mnemonic\WordList
-     */
-    protected $wordlist;
+    protected WordList $wordlist;
 
-    /**
-     * util
-     * 
-     * @var \Web3p\EthereumUtil\Util
-     */
-    protected $util;
+    protected Util $util;
 
-    /**
-     * privateKey
-     * 
-     * @var string
-     */
-    protected $privateKey;
+    protected string $privateKey;
 
-    /**
-     * mnemonic
-     * 
-     * @var string
-     */
-    protected $mnemonic;
+    protected string $mnemonic;
 
-    /**
-     * publicKey
-     * 
-     * @var string
-     */
-    protected $publicKey;
+    protected string $publicKey;
 
-    /**
-     * address
-     * 
-     * @var string
-     */
-    protected $address;
+    protected string $address;
 
-    /**
-     * defaultPath
-     * 
-     * @var string
-     */
-    protected $defaultPath = '44\'/60\'/0\'/0/0';
+    protected string $defaultPath = '44\'/60\'/0\'/0/0';
 
-    /**
-     * construct
-     * 
-     * @param \BitWasp\Bitcoin\Mnemonic\WordList $wordlist
-     * @return void
-     */
     public function __construct(WordList $wordlist = null)
     {
         if (!$wordlist) {
@@ -90,12 +41,9 @@ class Wallet
     }
 
     /**
-     * get
-     * 
-     * @param string $name
      * @return mixed
      */
-    public function __get($name)
+    public function __get(string $name)
     {
         $method = 'get' . ucfirst($name);
 
@@ -106,13 +54,10 @@ class Wallet
     }
 
     /**
-     * set
-     * 
-     * @param string $name
      * @param mixed $value
      * @return mixed
      */
-    public function __set($name, $value)
+    public function __set(string $name, $value)
     {
         $method = 'set' . ucfirst($name);
 

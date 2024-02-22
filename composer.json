@@ -1,11 +1,11 @@
 {
-    "name": "web3p/ethereum-wallet",
+    "name": "bogdra/ethereum-wallet",
     "description": "Ethereum wallet library in PHP.",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "sc0Vu",
+            "name": "bogdra",
             "email": "alk03073135@gmail.com"
         }
     ],
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Web3p\\EthereumWallet\\": "src/"
+            "Bogdra\\EthereumWallet\\": "src/"
         }
     },
     "autoload-dev": {
